@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Parcial</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="./Estilos.css">
+    </head>
+
+    <body class="container">
+        <!-- Navbar donde aparece  el logo y el nombre de la veterinaria -->
+        <div class="navbar">
+            <img src="../images/logo.png "width="5%" height="5%">
+            <h1>Veterinaria Dr.Perruno</h1>
+        </div>
+        <br>
+        <!-- Aca se inserta lo que es el encabezado de la tabla-->
+        <div
+            class="table-responsive"
+        >
+            <table
+                class="table table-primary"
+            >    <!-- Esta es el encabezado de la tabla -->
+
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">ANIMAL </th>
+                        <th scope="col">ESPECIE</th>
+                        <th scope="col">EDAD</th>
+                        <th scope="col">VACUNAS</th>
+                        <th scope="col">ACCIONES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            <!-- Boton de agregar donde se atribuye el metodo de mostrar el modal de agregar nuevos animales -->
+            <a
+            class="btn btn-primary"
+            href="#"
+            role="button"
+            onclick=mostrarAgregarAnimalModal() 
+            >Agregar</a>
+        </div>
+        <!-- Modal para Editar Animal -->
+        <div class="modal fade" id="editarAnimalModal" tabindex="-1" aria-labelledby="editarAnimalModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editarAnimalModalLabel">Editar Animal</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="editarAnimalForm">
+                            <input type="hidden" id="animalId" />
+                            <div class="mb-3">
+                                <label for="animalNombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="animalNombre" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="animalEspecie" class="form-label">Especie</label>
+                                <input type="text" class="form-control" id="animalEspecie" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="animalEdad" class="form-label">Edad</label>
+                                <input type="number" class="form-control" id="animalEdad" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="animalVacunas" class="form-label">Vacunas (separadas por coma)</label>
+                                <input type="text" class="form-control" id="animalVacunas"/>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para Agregar Animal -->
+        <div class="modal fade" id="nuevoAgregarAnimalModal" tabindex="-1" aria-labelledby="nuevoAgregarAnimalModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="nuevoAgregarAnimalModalLabel">Agregar Nuevo Animal</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="nuevoAgregarAnimalForm">
+                            <div class="mb-3">
+                                <label for="nuevoNombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="nuevoNombre" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="nuevoEspecie" class="form-label">Especie</label>
+                                <input type="text" class="form-control" id="nuevoEspecie" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="nuevoEdad" class="form-label">Edad</label>
+                                <input type="number" class="form-control" id="nuevoEdad" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="nuevoVacunas" class="form-label">Vacunas (separadas por coma)</label>
+                                <input type="text" class="form-control" id="nuevoVacunas" />
+                            </div>
+                            <button type="submit" class="btn btn-primary">Agregar Animal</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+        <script src="logica.js"></script>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+body{
+    background-color: white;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+.navbar h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+.navbar img {
+    margin-left: 2%;
+    margin-right: 10px; 
+}
